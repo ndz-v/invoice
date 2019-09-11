@@ -1,0 +1,35 @@
+\documentclass{invoicestyle}
+
+\xdef\companyname{Vorname Nachname}
+\xdef\companysubtitle{Mein Subtitel}
+\xdef\companyaddress{Musterstr. 30, 12345 Stadt}
+\xdef\companytel{+49 162 1234 1234}
+\xdef\companyemail{vorname.nachname@mail.de}
+\xdef\taxid{12 123 456 789}
+\xdef\kontonr{012345678}
+\xdef\blz{63070024}
+\xdef\blz{01234567}
+\xdef\bankiban{DE86\,1234\,1234\,1324\,1234\,00}
+\xdef\bankbic{DEUTDEDB600}
+
+
+\begin{document}
+
+\invoiceheader{}
+
+\invoicetoadress
+{MusterFirma GmbH}
+{Musterstrasse 10}
+{12345 Stadt}
+
+
+\begin{invoiceTable}
+    \feetype{Stundenbasierte Angabe}
+    \hourrow{Einzelbeschreibung}{1}{100}
+    \feetype{Mengenbasierte Angabe}
+    \unitrow{Beschreibung}{2}{100}{Einheiten}
+\end{invoiceTable}
+
+\invoicefooter
+
+\end{document}
