@@ -236,7 +236,7 @@
 }
 
 
-\newcommand{\invoicefooter}{
+\newcommand{\invoicefooter}[1][14 Tagen]{
     \vfill
     \small
 
@@ -253,5 +253,5 @@
         \hbox to 1.8cm{BIC\,:\hss} \bankbic{}
     \end{multicols}
 \long\xdef\conditions{ }
-\footnotestyle{\textbf{Zahlungsbedingungen:} Bitte überweisen Sie innerhalb von 14 Tagen den Gesamtbetrag von \total{cost} \euro \ auf das obige Konto}
+\footnotestyle{\textbf{Zahlungsbedingungen:} Bitte überweisen Sie innerhalb von #1 den Gesamtbetrag von \total{cost} \euro \ auf das obige Konto}
 }
